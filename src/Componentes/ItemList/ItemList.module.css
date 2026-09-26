@@ -1,0 +1,9 @@
+.itemList{
+    display: flex; 
+    gap: 20px;
+    flex-wrap: wrap;
+    color:rgb(14, 14, 14);
+    background-color:white ;
+    flex-direction: row;
+    justify-content:space-between;
+}

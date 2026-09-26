@@ -1,0 +1,7 @@
+    [ 
+        { "id": "1", "nombre": "Leandro Cattani", "puesto": "Desarrollador Senior", "email": "cata@gmail.com", "foto":"/Imagenes/cata.png" }, 
+        { "id": "2", "nombre": "Oscar Alarcon", "puesto": "Jefe Infra", "email": "dogor@gmail.com", "foto":"/Imagenes/gordo.png" }, 
+        { "id": "3", "nombre": "Hugo Pagano", "puesto": "DBA", "email": "Hugo@gmail.com", "foto":"/Imagenes/hugo.png" }, 
+        { "id": "4", "nombre": "Diego Sanchez", "puesto": "Supervisor Infra", "email": "diegote@gmail.com", "foto":"/Imagenes/diegote.png" }, 
+        { "id": "5", "nombre": "Jony Rios", "puesto": "Analista Seguridad", "email": "jony@gmail.com", "foto":"/Imagenes/jony.png" }
+    ]

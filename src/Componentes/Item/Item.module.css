@@ -1,0 +1,5 @@
+.item{
+    background-color: blueviolet;
+    flex: 1 0 200px;
+    padding-bottom: 30px;
+}

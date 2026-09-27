@@ -1,21 +1,21 @@
 import  ItemList  from '../ItemList/ItemList';
-import useProductos from '../../Repositorio/Producto/useProductos'
-import useFetch from '../../Repositorio/useFetch'
 
-function ItemListContainer({ Mensaje }) { 
-    const { productos, error, cargando } = useProductos();
-    //  const { data: productos, error, cargando } = useFetch('/Data/Productos.json');
-    console.log({Mensaje})
-    console.log(productos)
+import { useGetData } from '../../Repositorio/api';
+
+function ItemListContainer({ Mensaje, vista , recurso}) { 
+    const { data, error, cargando } = useGetData(recurso);
+    console.log("estoy en itemListContainer")
+    console.log(data)
     if (cargando) return <p>Cargando productos...</p>;
     if (error) {
         console.log("error---:"+error);
-            return <p>Error: {error}</p>;}
+        return <p>Error: {error}</p>;
+    }
     return ( 
         <div> 
             <h2>{Mensaje}</h2> 
             <div>
-                <ItemList productos={productos} />
+                <ItemList recurso={data} vista={vista}/>
             </div> 
         </div> 
     );

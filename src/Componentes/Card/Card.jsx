@@ -2,7 +2,7 @@ import estiloCarta from './Card.module.css';
 
 import  Contador  from '../Contador/Contador'
 
-function Card({nombre, precio, stock}){
+function Card({nombre, precio, stock, imagen}){
     // const [contador, setContador]=useState(0);
 
     const btnComprarClick=()=>{
@@ -19,7 +19,7 @@ function Card({nombre, precio, stock}){
                 <h5 className="card-subtitle">Descripcion</h5>
                 <p className='card-text'>Precio: ${precio}</p>
                 <p className='card-text'>Stock: {stock}</p>
-               
+                <img src={imagen} alt="Ejemplo de imagen" />
                 <Contador />
                 <button  onClick={btnComprarClick} className={estiloCarta.boton}>Comprar</button>
             </div>

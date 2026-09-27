@@ -7,6 +7,12 @@
     margin:10px
 }
 
+.card img {
+  width: 50%;
+  height: 50%;
+  object-fit: cover; /* Ajusta la imagen sin deformarla, rellenando el espacio */
+  object-position: center; /* Centra la parte principal de la imagen */
+}
 .cardHeader {
 	background-color: #28a745;
 	color: white;

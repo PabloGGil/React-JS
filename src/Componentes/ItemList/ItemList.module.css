@@ -3,7 +3,23 @@
     gap: 20px;
     flex-wrap: wrap;
     color:rgb(14, 14, 14);
-    background-color:white ;
+    /* background-color:rgb(205, 8, 8) ; */
     flex-direction: row;
     justify-content:space-between;
+}
+
+ul {
+ /* list-style-image:url("/admin-svgrepo-com.svg"); */
+background-color: rgb(26, 5, 122);
+list-style-position:inside;
+}
+
+li {
+margin: 0;
+	padding: 10px 0 10px 1%;
+	list-style: none;
+	background-image: url("/admin-svgrepo-com.svg");
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 40px;
 }

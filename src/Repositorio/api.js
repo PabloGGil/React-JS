@@ -1,31 +1,30 @@
 import { useEffect } from "react";
 import { useState } from "react";
 
-export  function useGetData(recurso) {
-    
+function useGetData(recurso) {    
         const [cargando, setCargando] = useState(true);
         const [data, setData]=useState([]);
         const [error, setError]=useState("");
-    console.log("estoy en el useGet")
+
+        console.log("estoy en el useGet")
+        setCargando(true);
+        setError(null);
         useEffect(()=>{
-            const controller = new AbortController();
-                let activo = true;
+
             const cargar = async () => {
-                
-                setCargando(true);
-                setError(null);
                 try {
                     const opciones = {
                         method: "GET",
                         headers: { "Content-Type": "application/json" },
-                        signal: controller.signal,
+                        // signal: controller.signal,
                     };
                     const response = await fetch(recurso, opciones);
                     if (!response.ok) {
                         throw new Error(`Error HTTP: ${response.status}`);
                     }
                     const rta = await response.json();
-                    if (activo) setData(rta);
+                    console.log(rta)
+                    setData(rta);
                 } catch (err) {
                     if (err.name !== "AbortError" && activo) {
                         setError(err.message);
@@ -36,17 +35,20 @@ export  function useGetData(recurso) {
             };
 
             cargar();
-            return () => {
-            activo = false;
-            controller.abort();
-        };
+
     },[recurso])
 
 
     return {data, error, cargando};
 }
 
-export async function postData(recurso,postData){
+
+function useGetxId(recurso, id) {
+
+  return { data, cargando, error };
+}
+ 
+async  function usePostData(recurso,postData){
     try{         
         const opciones= {
                     method: 'POST', 
@@ -70,3 +72,4 @@ export async function postData(recurso,postData){
     }
     
 }
+export  {useGetData, usePostData, useGetxId};

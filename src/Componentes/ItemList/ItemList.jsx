@@ -14,7 +14,7 @@ function ItemList({ recurso,vista }) {
         </div> 
         )     
     }
-    console.log(recurso)
+    // console.log(recurso)
     return ( 
        
         <ul >

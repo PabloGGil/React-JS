@@ -12,7 +12,7 @@ const NavBar=()=>{
                 <Link to="/">Inicio</Link> 
                 <Link to="/productos">Productos</Link> 
                 <Link to="/destacados">Destacados</Link> 
-                <Link to="/contacto">Contacto</Link> 
+                <Link to="/carrito">Carrito</Link> 
              
             </nav>
         </div>

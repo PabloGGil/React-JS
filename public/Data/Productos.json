@@ -1,9 +1,9 @@
  [ 
-        { "id": "1234", "nombre": "Notebook Pro", "precio": 12000, "stock": 15 , "imagen":"/notebook.png"}, 
-        { "id": "2344", "nombre": "Monitor Curvo", "precio": 450000, "stock": 25, "imagen":"/monitor_curvo.png" }, 
-        { "id": "2545", "nombre": "Teclado Mecánico", "precio": 15000, "stock": 50 , "imagen":"/teclado.png"},
-        { "id": "2546", "nombre": "mouse", "precio": 15000, "stock": 50 , "imagen":"/mouse.png"},
-        { "id": "2547", "nombre": "router wi fi", "precio": 15000, "stock": 50 , "imagen":"/router.png"},
-        { "id": "2548", "nombre": "Teclado Mecánico", "precio": 15000, "stock": 50 , "imagen":"/notebook.png"},
-        { "id": "2549", "nombre": "Teclado Mecánico", "precio": 15000, "stock": 50 , "imagen":"/notebook.png" }
+        { "id": 1234, "nombre": "Notebook Pro"    , "precio": 12000 , "stock": 15 , "imagen":"/notebook.png"     ,"descripcion":"", "categoria":""}, 
+        { "id": 2344, "nombre": "Monitor Curvo"   , "precio": 450000, "stock": 25 , "imagen":"/monitor_curvo.png","descripcion":"", "categoria":"" }, 
+        { "id": 2345, "nombre": "Teclado Mecánico", "precio": 15000 , "stock": 50 , "imagen":"/teclado.png"      ,"descripcion":"", "categoria":""},
+        { "id": 2346, "nombre": "mouse"           , "precio": 15000 , "stock": 50 , "imagen":"/mouse.png"        ,"descripcion":"", "categoria":""},
+        { "id": 2547, "nombre": "router wi fi"    , "precio": 15000 , "stock": 50 , "imagen":"/router.png"       ,"descripcion":"", "categoria":""},
+        { "id": 2548, "nombre": "Teclado Mecánico", "precio": 15000 , "stock": 50 , "imagen":"/notebook.png"     ,"descripcion":"", "categoria":""},
+        { "id": 2549, "nombre": "Teclado Mecánico", "precio": 15000 , "stock": 50 , "imagen":"/notebook.png"     ,"descripcion":"", "categoria":"" }
 ]

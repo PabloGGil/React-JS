@@ -9,6 +9,7 @@ function Contador(){
             setContador(contador -1)
         }
     }
+    
     return ( 
         <div style={{ margin: '5px', padding: '5px', border: '1px solid black' }}> 
             <div style={{ border: '2px solid #ccc', padding: '15x 30px', borderRadius: '8px', textAlign: 'center' ,display:'flex', alignItems: 'center',gap:'15px',justifyContent:'center'}}>

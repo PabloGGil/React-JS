@@ -7,12 +7,13 @@ function useGetData(recurso) {
         const [error, setError]=useState("");
 
         console.log("estoy en el useGet")
-        setCargando(true);
-        setError(null);
+        
         useEffect(()=>{
-
             const cargar = async () => {
-                try {
+            try {
+
+                setCargando(true);
+                setError(null);
                     const opciones = {
                         method: "GET",
                         headers: { "Content-Type": "application/json" },
@@ -33,11 +34,11 @@ function useGetData(recurso) {
                     setCargando(false);
                 }
             };
+        cargar();
+            
 
-            cargar();
-
-    },[recurso])
-
+    },[])
+    
 
     return {data, error, cargando};
 }

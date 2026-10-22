@@ -7,6 +7,7 @@ import ItemDetalle from './Componentes/Item/ItemDetalle';
 import Carrito from './Componentes/Carrito/Carrito';
 import Productos from './Componentes/Producto/Productos'
 import ProductoDetalle from './Componentes/Producto/ProductoDetalle'
+import CargaMasiva from './Firebase/CargaMasiva'
 
 function App() {
   const imagenes=["./teclado.png", "./mouse.png", "./router.png" ];
@@ -14,6 +15,7 @@ function App() {
     <>
       <Routes>
         <Route element={<Laiau />}>
+          <Route path='/cargaMasiva' element={<CargaMasiva />} />
           <Route path='/' element={<Calesita imagenes={imagenes} />} / >   
           <Route path='/productos' element={<Productos Mensaje={"Todos los Productos "}/> } />
           <Route path='/producto/:id' element={<ProductoDetalle />} />

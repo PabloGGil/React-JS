@@ -2,21 +2,28 @@ import estiloCarta from './Card.module.css';
 import  Contador  from '../Contador/Contador'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import BotonFavorito from '../BotonFavorito';
+
+// import { useCarrito } from '../../Contexto/CarritoContext';
 
 function Card({id, nombre, precio, stock, imagen, descripcion, categoria}){
+    const producto={id, nombre, precio, stock, imagen, descripcion, categoria};
     const [mostrarDetalle, setMostrarDetalle] = useState(false);
+
+    
     const verDetalle = () => {
         setMostrarDetalle(true);
     };
-// const{id}=useParams();
-console.log({id});
-  
+ 
+    
+    const [esFavorito, setEsFavorito] = useState(false); 
+    const marcarComoFavorito = () => {
+                        setEsFavorito(!esFavorito); 
+                        };
+    
     const cerrarDetalle = () => {
         setMostrarDetalle(false);
     };
-    const btnComprarClick=()=>{
-        alert(`Compraste el producto ${nombre}`)
-    }
 
     return(
         <>
@@ -31,8 +38,9 @@ console.log({id});
                     <p className='card-text'>Precio: ${precio}</p>
                     <p className='card-text'>Stock: {stock}</p>
                     </Link>
-                    <Contador />
-                    <button  onClick={btnComprarClick} className={estiloCarta.boton}>Comprar</button>
+                    <div   >
+                        <BotonFavorito />
+                    </div>
                 </div>
             </div>
         </div>

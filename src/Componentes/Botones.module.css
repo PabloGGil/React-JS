@@ -1,0 +1,33 @@
+.botonAzul{
+    background-color: rgba(0, 0, 255, 0.851);
+    padding: 10px;
+    margin-top:10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+
+}
+
+/* --- Boton Favoritos -------- */
+.botonFavoritos {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.icono {
+  width: 24px;
+  height: 24px;
+  fill: transparent;
+  stroke: #fbf9f9;
+  stroke-width: 2;
+  transition: all 0.2s ease;
+}
+
+/* este estilo lo toma cuando el esfavorito esta en true  */
+.activo .icono {
+  fill: #e74c3c;
+  stroke: #e74c3c;
+}
+
+/* ---------------------------- */

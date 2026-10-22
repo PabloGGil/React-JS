@@ -1,18 +1,22 @@
 import React from "react";
 import estiloNav from './NavBar.module.css';
 import { Link } from 'react-router-dom';
+import { useCarrito } from '../../Contexto/CarritoContext';
 
 const NavBar=()=>{
-
+    const { itemsEnCarrito } = useCarrito();
+    const totalItems = itemsEnCarrito();
     return (
         <>
         <div className={estiloNav.navbar}>
             <nav>
-           
+                <Link to="/cargaMasiva">CargaMasiva</Link>
                 <Link to="/">Inicio</Link> 
                 <Link to="/productos">Productos</Link> 
                 <Link to="/destacados">Destacados</Link> 
-                <Link to="/carrito">Carrito</Link> 
+                <Link to="/carrito">🛒 {totalItems > 0 &&
+                    <span>{totalItems}</span>}
+                </Link> 
              
             </nav>
         </div>

@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "titulo": "Fjallraven - Mochila plegable n.° 1, con capacidad para portátiles de 15 pulgadas",
+    "precio": 109.95,
+    "descripcion": "Tu mochila perfecta para el uso diario y paseos por el bosque. Guarda tu portátil (hasta 15 pulgadas) en el compartimento acolchado, tu mochila de uso diario",
+    "categoria": "ropa de hombre",
+    "imagen": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png",
+    "calificacion": {
+      "tasa": 3.9,
+      "contar": 120
+    }
+  },
+  {
+    "id": 2,
+    "titulo": "Camisetas casuales de corte ajustado premium para hombre",
+    "precio": 22.3,
+    "descripcion": "Estilo ajustado, manga larga raglán en contraste, tapeta Henley de tres botones, tejido ligero y suave para una mayor transpirabilidad y comodidad. Camisas con costuras sólidas y cuello redondo, diseñadas para mayor durabilidad y un ajuste perfecto para un estilo casual y para los fanáticos del béisbol. El cuello redondo estilo Henley incluye una tapeta de tres botones.",
+    "categoria": "ropa de hombre",
+    "imagen": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_t.png",
+    "calificacion": {
+      "tasa": 4.1,
+      "recuento": 259
+    }
+  },
+  {
+    "id": 3,
+    "titulo": "Chaqueta de algodón para hombre",
+    "precio": 55.99,
+    "descripcion": "Magníficas chaquetas de abrigo para primavera/otoño/invierno, adecuadas para muchas ocasiones, como trabajar, hacer senderismo, acampar, escalar montañas/rocas, montar en bicicleta, viajar u otras actividades al aire libre. Una buena opción de regalo para ti o un familiar. Un cálido gesto de cariño para padre, marido o hijo en este Día de Acción de Gracias o Navidad.",
+    "categoria": "ropa de hombre",
+    "imagen": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_t.png",
+    "calificacion": {
+      "tasa": 4.7,
+      "recuento": 500
+    }
+  },
+  {
+    "id": 4,
+    "titulo": "Corte ajustado casual para hombre",
+    "precio": 15.99,
+    "descripcion": "El color puede variar ligeramente entre la pantalla y el producto real. / Tenga en cuenta que la complexión física varía según la persona, por lo que la información detallada sobre las tallas debe consultarse a continuación en la descripcion del producto.",
+    "categoria": "ropa de hombre",
+    "imagen": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_t.png",
+    "calificacion": {
+      "tasa": 2.1,
+      "recuento": 430
+    }
+  },
+  {
+    "id": 5,
+    "titulo": "Pulsera de cadena Naga Dragon de oro y plata para mujer de John Hardy Legends",
+    "precio": 695,
+    "descripcion": "De nuestra Colección Leyendas, el Naga se inspiró en el mítico dragón de agua que protege la perla del océano. Úsalo con la punta hacia adentro para recibir amor y abundancia, o hacia afuera para protección.",
+    "categoria": "joyería",
+    "imagen": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_t.png",
+    "calificacion": {
+      "tasa": 4.6,
+      "recuento": 400
+    }
+  },
+  {
+    "id": 6,
+    "titulo": "Micropavé pequeño de oro macizo",
+    "precio": 168,
+    "descripcion": "Satisfacción garantizada. Devuelva o cambie cualquier pedido dentro de los 30 días. Diseñado y vendido por Hafeez Center en los Estados Unidos. Satisfacción garantizada. Devuelva o cambie cualquier pedido dentro de los 30 días.",
+    "categoria": "joyería",
+    "imagen": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_t.png",
+    "calificacion": {
+      "tasa": 3.9,
+      "contar": 70
+    }
+  },
+  {
+    "id": 7,
+    "titulo": "Princesa chapada en oro blanco",
+    "precio": 9.99,
+    "descripcion": "Anillo de compromiso solitario de diamantes clásico creado para ella. Regalos para consentir aún más a tu amor para compromiso, boda, aniversario, San Valentín...",
+    "categoria": "joyería",
+    "imagen": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_t.png",
+    "calificacion": {
+      "tasa": 3,
+      "recuento": 400
+    }
+  },
+  {
+    "id": 8,
+    "titulo": "Búho perforado de acero inoxidable chapado en oro rosa doble",
+    "precio": 10.99,
+    "descripcion": "Pendientes de túnel dobles acampanados chapados en oro rosa. Fabricados en acero inoxidable 316L",
+    "categoria": "joyería",
+    "imagen": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_t.png",
+    "calificacion": {
+      "tasa": 1.9,
+      "contar": 100
+    }
+  },
+  {
+    "id": 9,
+    "titulo": "Disco duro externo portátil WD Elements de 2 TB - USB 3.0",
+    "precio": 64,
+    "descripcion": "Compatibilidad con USB 3.0 y USB 2.0. Transferencias de datos rápidas. Mejora del rendimiento del PC. Alta capacidad; compatibilidad. Formateado en NTFS para Windows 10, Windows 8.1 y Windows 7; puede ser necesario reformatear para otros sistemas operativos; la compatibilidad puede variar según la configuración de hardware y el sistema operativo del usuario",
+    "categoria": "electrónica",
+    "imagen": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_t.png",
+    "calificacion": {
+      "tasa": 3.3,
+      "contar": 203
+    }
+  },
+  {
+    "id": 10,
+    "titulo": "SanDisk SSD PLUS 1TB SSD interno - SATA III 6 Gb/s",
+    "precio": 109,
+    "descripcion": "Actualización sencilla para un arranque, apagado, carga de aplicaciones y respuesta más rápidos (en comparación con un disco duro SATA de 2,5 y 5400 RPM; basado en las especificaciones publicadas y las pruebas de rendimiento internas utilizando las puntuaciones de PCMark Vantage). Aumenta el rendimiento de escritura en ráfaga, lo que lo hace ideal para las cargas de trabajo típicas de un PC. El equilibrio perfecto entre rendimiento y fiabilidad. Velocidades de lectura/escritura de hasta 535 MB/s/450 MB/s (basado en pruebas internas; el rendimiento puede variar según la capacidad de la unidad, el dispositivo host, el sistema operativo y la aplicación)",
+    "categoria": "electrónica",
+    "imagen": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_t.png",
+    "calificacion": {
+      "tasa": 2.9,
+      "recuento": 470
+    }
+  },
+  {
+    "id": 11,
+    "titulo": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
+    "precio": 109,
+    "descripcion": "La memoria flash 3D NAND se utiliza para ofrecer altas velocidades de transferencia. Velocidades de transferencia notables que permiten un arranque más rápido y un rendimiento general mejorado del sistema. La avanzada tecnología de caché SLC permite un aumento del rendimiento y una vida útil más larga. Diseño delgado de 7 mm adecuado para Ultrabooks y portátiles ultradelgados. Admite el comando TRIM, la tecnología de recolección de basura, RAID y ECC (comprobación y corrección de errores) para proporcionar un rendimiento optimizado y una mayor fiabilidad.",
+    "categoria": "electrónica",
+    "imagen": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_t.png",
+    "calificacion": {
+      "tasa": 4.8,
+      "conteo": 319
+    }
+  },
+  {
+    "id": 12,
+    "titulo": "Disco duro externo portátil WD de 4 TB para juegos compatible con PlayStation 4",
+    "precio": 114,
+    "descripcion": "Amplía tu experiencia de juego en PS4, juega en cualquier lugar, rápido y fácil de configurar, diseño elegante con alta capacidad, garantía limitada del fabricante de 3 años",
+    "categoria": "electrónica",
+    "imagen": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_t.png",
+    "calificacion": {
+      "tasa": 4.8,
+      "recuento": 400
+    }
+  },
+  {
+    "id": 13,
+    "titulo": "Acer SB220Q bi 21,5 pulgadas Full HD (1920 x 1080) IPS Ultra-Thin",
+    "precio": 599,
+    "descripcion": "Pantalla IPS panorámica Full HD de 21,5 pulgadas (1920 x 1080) y tecnología Radeon FreeSync. No es compatible con montaje VESA. Frecuencia de actualización: 75 Hz - mediante puerto HDMI. Diseño sin marco | ultrafino | tiempo de respuesta de 4 ms | panel IPS. Relación de aspecto: 16:9. Colores compatibles: 16,7 millones de colores. Brillo: 250 nits. Ángulo de inclinación: de 5 a 15 grados. Ángulo de visión horizontal: 178 grados. Ángulo de visión vertical: 178 grados. 75 hercios",
+    "categoria": "electrónica",
+    "imagen": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_t.png",
+    "calificacion": {
+      "tasa": 2.9,
+      "recuento": 250
+    }
+  },
+  {
+    "id": 14,
+    "title": "Monitor curvo para juegos Samsung CHG90 de 49 pulgadas y 144 Hz (LC49HG90DMNXZA) – Pantalla súper ultraancha QLED",
+    "precio": 999.99,
+    "descripcion": "Monitor curvo para juegos de 49 pulgadas súper ultra ancho 32:9 con doble pantalla de 27 pulgadas una al lado de la otra. La tecnología QUANTUM DOT (QLED), la compatibilidad con HDR y la calibración de fábrica proporcionan colores y contrastes increíblemente realistas y precisos. La alta frecuencia de actualización de 144 Hz y el tiempo de respuesta ultrarrápido de 1 ms trabajan para eliminar el desenfoque de movimiento, el efecto fantasma y reducir el retardo de entrada",
+    "categoria": "electrónica",
+    "imagen": "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_t.png",
+    "calificacion": {
+      "tasa": 2.2,
+      "recuento": 140
+    }
+  },
+  {
+    "id": 15,
+    "titulo": "Chaqueta de snowboard 3 en 1 para mujer BIYLACLESEN, abrigos de invierno",
+    "precio": 56.99,
+    "descripcion": "Nota: La chaqueta es de talla estándar estadounidense. Elija la talla que usa habitualmente. Material: 100 % poliéster; Forro desmontable. Tejido: Forro polar cálido. Forro funcional desmontable: Agradable para la piel, ligero y cálido. Chaqueta con forro de cuello alto para mantenerte abrigado en climas fríos. Bolsillos con cremallera: 2 bolsillos laterales con cremallera, 2 bolsillos con cremallera en el pecho (suficientes para guardar tarjetas o llaves) y 1 bolsillo oculto en el interior. Los bolsillos laterales con cremallera y el bolsillo oculto mantienen tus pertenencias seguras. Diseño humanizado: Capucha ajustable y desmontable y puños ajustables para proteger del viento y el agua, para un ajuste cómodo. El diseño desmontable 3 en 1 ofrece mayor comodidad: puedes separar la chaqueta y el forro según sea necesario o usarlos juntos. Es adecuado para diferentes estaciones y te ayuda a adaptarte a diferentes climas",
+    "categoria": "ropa de mujer",
+    "imagen": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_t.png",
+    "calificacion": {
+      "tasa": 2.6,
+      "contar": 235
+    }
+  },
+  {
+    "id": 16,
+    "titulo": "Chaqueta de motociclista Lock and Love para mujer, de piel sintética con capucha extraíble",
+    "precio": 29.95,
+    "descripcion": "100% POLIURETANO (exterior) 100% POLIÉSTER (forro) 75% POLIÉSTER 25% ALGODÓN (SUÉTER), Material de piel sintética para estilo y comodidad / 2 bolsillos delanteros, Chaqueta de piel sintética estilo mezclilla con capucha 2 en 1, Detalle de botones en la cintura / Costuras de detalle en los laterales, LAVAR A MANO SOLAMENTE / NO USAR BLANQUEADOR / SECAR AL AIRE LIBRE / NO PLANCHAR",
+    "categoria": "ropa de mujer",
+    "imagen": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_t.png",
+    "calificacion": {
+      "tasa": 2.9,
+      "recuento": 340
+    }
+  },
+  {
+    "id": 17,
+    "titulo": "Chaqueta impermeable cortavientos para mujer, impermeables de escalada a rayas",
+    "precio": 39.99,
+    "descripcion": "Ligero, perfecto para viajes o uso casual. Manga larga con capucha, diseño de cintura ajustable con cordón. Impermeable con cierre frontal de botones y cremallera, totalmente forrado a rayas. El impermeable tiene 2 bolsillos laterales de buen tamaño para guardar todo tipo de cosas, cubre las caderas y la capucha es amplia pero no exagerada. La capucha adjunta forrada de algodón con cordones ajustables le da un aspecto realmente elegante.",
+    "categoria": "ropa de mujer",
+    "imagen": "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2t.png",
+    "calificacion": {
+      "tasa": 3.8,
+      "contar": 679
+    }
+  },
+  {
+    "id": 18,
+    "titulo": "MBJ Mujer Solapa Manga Corta Cuello Barco V ",
+    "precio": 9.85,
+    "descripcion": "95% RAYÓN 5% SPANDEX, Hecho en EE. UU. o Importado, No usar lejía, Tejido ligero con gran elasticidad para mayor comodidad, Acanalado en mangas y cuello / Doble costura en el dobladillo inferior",
+    "categoria": "ropa de mujer",
+    "imagen": "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_t.png",
+    "calificacion": {
+      "tasa": 4.7,
+      "recuento": 130
+    }
+  },
+  {
+    "id": 19,
+    "titulo": "Camiseta de manga corta hidratante para mujer Opna",
+    "precio": 7.95,
+    "descripcion": "100% poliéster, lavable a máquina, interlock 100% poliéster catiónico, lavable a máquina y preencogido para un ajuste perfecto, ligero, amplio y altamente transpirable con tejido que absorbe la humedad y ayuda a mantenerla alejada, tejido suave y ligero con cómodo cuello en V y un ajuste más ajustado, que ofrece una silueta elegante y más femenina y mayor comodidad",
+    "categoria": "ropa de mujer",
+    "imagen": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_t.png",
+    "calificacion": {
+      "tasa": 4.5,
+      "conteo": 146
+    }
+  },
+  {
+    "id": 20,
+    "titulo": "Camiseta casual de algodón para mujer DANVOUY",
+    "precio": 12.99,
+    "descripcion": "95% algodón, 5% elastano, Características: Informal, Manga corta, Estampado de letras, Cuello en V, Camisetas de moda, La tela es suave y tiene algo de elasticidad., Ocasión: Informal/Oficina/Playa/Escuela/Hogar/Calle. Temporada: Primavera, Verano, Otoño, Invierno.",
+    "categoria": "ropa de mujer",
+    "imagen": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_t.png",
+    "calificacion": {
+      "tasa": 3.6,
+      "recuento": 145
+    }
+  }
+]

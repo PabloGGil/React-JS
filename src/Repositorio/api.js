@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import { collection, getDocs,doc,query,where, getDoc } from "firebase/firestore";
+import { db } from "../Firebase/config";
 
 function useGetData(recurso) {    
         const [cargando, setCargando] = useState(true);
@@ -44,10 +46,35 @@ function useGetData(recurso) {
 }
 
 
-function useGetxId(recurso, id) {
+async function useGetxId(recurso, id) {
+    const [productos, setProductos]=useState([]);
 
-  return { data, cargando, error };
+    // useEffect(()=>{
+    //     const obtenerProductos=async()=>{
+    //         const baseRef=collection(db, recurso);
+    //         const docs=await getDocs(baseRef)
+    //         const lista= docs.docs.map(doc =>({id:doc.id, ...doc.data()}));
+    //         setProductos(lista);
+    //     }
+    //     obtenerProductos();
+    // },[]);
+
+  return { producto };
+    
 }
+
+const obtenerDocumento = async (recurso,id) => {
+  const docRef = doc(db, recurso, id); // Referencia directa
+  const docSnap = await getDoc(docRef);
+
+  if (docSnap.exists()) {
+    return { id: docSnap.id, ...docSnap.data() };
+  } else {
+    console.log("No existe ese documento");
+    return null;
+  }
+};
+
  
 async  function usePostData(recurso,postData){
     try{         
@@ -73,4 +100,44 @@ async  function usePostData(recurso,postData){
     }
     
 }
-export  {useGetData, usePostData, useGetxId};
+async function useGetBD( tabla){
+    const [cargando, setCargando] = useState(true);
+    const [data, setData]=useState([]);
+    const [error, setError]=useState("");
+
+        console.log("estoy en el useGetBD")
+     
+        useEffect(()=>{
+            let activo = true;
+            const cargar = async () => {
+                try {
+                    
+                    const coleccion =  collection(db, tabla);
+                    const objetos=await getDocs(coleccion)
+                    const lista = objetos.docs.map(doc => ({id: doc.id, ...doc.data()}));
+                    if (activo) {
+                       setData(lista);
+                    }
+                    // setData(rta);
+                } catch (err) {
+                if (activo) {
+                    setError(err.message);
+                }
+            } finally {
+                if (activo) {
+                    setCargando(false);
+                }
+            } 
+            };
+            cargar();        
+            return () => {
+                activo = false; // Limpieza si el componente se desmonta
+            }; 
+        },[tabla])
+    //  activo = false;
+    console.log("data--->" +data)
+    return {data, error, cargando};
+
+}
+
+export  {useGetData, usePostData, useGetxId, useGetBD, obtenerDocumento};

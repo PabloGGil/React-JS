@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import { FormularioProducto } from '../../FormularioProducto/FormularioProducto';
+import  FormularioProducto  from './FormularioProducto';
+
 export function FormularioContainer(){
     const [datosForm, setDatosForm]=useState({
         nombre:'',
@@ -69,3 +70,4 @@ export function FormularioContainer(){
         />
     );
 }
+export default FormularioContainer

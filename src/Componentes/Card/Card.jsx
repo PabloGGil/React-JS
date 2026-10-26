@@ -1,13 +1,14 @@
 import estiloCarta from './Card.module.css';
-import  Contador  from '../Contador/Contador'
+// import  Contador  from '../Contador/Contador'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import BotonFavorito from '../BotonFavorito';
+import { DtoProducto } from './Dtoproducto';
 
 // import { useCarrito } from '../../Contexto/CarritoContext';
 
-function Card({id, nombre, precio, stock, imagen, descripcion, categoria}){
-    const producto={id, nombre, precio, stock, imagen, descripcion, categoria};
+function Card(data){
+    const producto={...data};
     const [mostrarDetalle, setMostrarDetalle] = useState(false);
 
     
@@ -29,14 +30,14 @@ function Card({id, nombre, precio, stock, imagen, descripcion, categoria}){
         <>
         <div className={estiloCarta.card}>
             <div className={estiloCarta.cardHeader}>
-                {nombre}
+                {producto.titulo}
             </div>
             <div onClick={verDetalle} className={estiloCarta.cardBody}>
                 <div className="card-body">
-                    <Link to={`/producto/${id}`}>
-                    <img src={imagen} alt="Ejemplo de imagen" />
-                    <p className='card-text'>Precio: ${precio}</p>
-                    <p className='card-text'>Stock: {stock}</p>
+                    <Link to={`/producto/${producto.id}`}>
+                    <img src={producto.imagen} alt="Ejemplo de imagen" />
+                    <p className='card-text'>Precio: ${producto.precio}</p>
+                    <p className='card-text'>Categoria: {producto.categoria}</p>
                     </Link>
                     <div   >
                         <BotonFavorito />
@@ -44,7 +45,7 @@ function Card({id, nombre, precio, stock, imagen, descripcion, categoria}){
                 </div>
             </div>
         </div>
-        
+        {/* <DtoProducto producto={producto}/> */}
       </>
     );
     

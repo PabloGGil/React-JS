@@ -1,48 +1,68 @@
-import { useState } from 'react'; 
+import { useEffect, useState } from 'react'; 
 import { useParams } from 'react-router-dom'; 
-import { useGetData } from '../../Repositorio/api';
-import estiloCarta from '../Card/Card.module.css';
 import { useCarrito } from '../../Contexto/CarritoContext';
 import boton from '../Botones.module.css';
+import useGetBD from '../../Repositorio/RepoProducto';
+// import { doc, getDoc } from "firebase/firestore";
+// import { db } from "../../Firebase/config";
 
 const ProductoDetalle = () => { 
-    // const [contador, setContador] = useState(0);
     const { id } = useParams(); 
-    const {data, cargando, error}=useGetData('/Data/Productos.json',{id});
-    const {agregarACarrito ,getCantidadActual,itemsEnCarrito}=useCarrito();
-    const [cantidad, setCantidad]=useState(0);
-    const cantidadActual= getCantidadActual(id)
+    const {data: productos, cargando, error} = useGetBD('productos');
+    // const [error, setError] = useState(null); // <-- 1. Añadido el estado de error
+    // const [producto, setProducto] = useState(null);
+    const [cantidad, setCantidad] = useState(0);
 
-    const producto=data.find(p => p.id === parseInt(id));
+    const { agregarACarrito, getCantidadActual } = useCarrito();
+    const cantidadActual = getCantidadActual(id);
+
+    let producto = productos.find((prod) => prod.id == id);
     
-    // verificar si existe
-    if (typeof producto==="undefined") { 
-        return <h2 style={{ backgroundColor: 'darkred',text: 'white'  }}>Producto no encontrado</h2>; 
+    if (cargando) {
+        return (
+            <div style={{ textAlign: 'center', padding: '20px' }}>
+                <p>Cargando datos desde la base de datos...</p>
+            </div>
+        );
+    }
+    // Manejamos posibles errores de red o permisos
+    if (error) {
+        return <p style={{ color: 'red' }}>Hubo un error al cargar: {error}</p>;
     }
 
-    const botonAgregar=()=> agregarACarrito(producto,cantidad);
+   
+
     const incrementar = () => setCantidad(cantidad + 1);
     const decrementar = () => { if (cantidad > 0) setCantidad(cantidad - 1); };
-    const btnComprarClick=()=>{
-        agregarACarrito(producto, cantidad);
-        alert(`Compraste el producto ${nombre}`)
-    }
 
+    const botonAgregar = () => {
+        if (cantidad === 0) {
+            alert("Por favor selecciona al menos una cantidad.");
+            return;
+        }
+        agregarACarrito(producto, cantidad);
+        alert(`Agregaste ${cantidad} unidad/es de ${producto.titulo} al carrito`);
+    };
+console.log(producto)
     return ( 
         <div> 
-            <h2>Detalle del Producto: {producto.nombre}</h2>
-            <img src={producto.imagen} alt={producto.nombre} style={{ maxWidth: '400px' }} /> 
+            <h2>Detalle del Producto: {producto.titulo}</h2>
+            <img src={producto.imagen} alt={producto.titulo} style={{ maxWidth: '400px' }} /> 
             <h3>${producto.precio}</h3> 
             <p>{producto.descripcion}</p> 
+
             <div style={{ margin: '5px', padding: '5px', border: '1px solid black' }}> 
-                <div style={{ border: '2px solid #ccc', padding: '15x 30px', borderRadius: '8px', textAlign: 'center' ,display:'flex', alignItems: 'center',gap:'15px',justifyContent:'center'}}>
+                <div style={{ border: '2px solid #ccc', padding: '15px 30px', borderRadius: '8px', textAlign: 'center', display: 'flex', alignItems: 'center', gap: '15px', justifyContent: 'center' }}>
                     <button className={boton.botonAzul} onClick={incrementar}> + </button> 
-                    <span>{cantidad}</span>
+                    <span>{cantidad}</span> {/* <-- Mostramos el estado 'cantidad' local */}
                     <button className={boton.botonAzul} onClick={decrementar}> - </button> 
                 </div>
-                 <button className={boton.botonAzul} onClick={botonAgregar}> Comprar </button> 
+                <button className={boton.botonAzul} onClick={botonAgregar} style={{ marginTop: '10px' }}> 
+                    Comprar / Agregar 
+                </button> 
             </div>
         </div> 
     ); 
 }; 
+
 export default ProductoDetalle;

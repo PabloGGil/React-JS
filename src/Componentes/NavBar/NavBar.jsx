@@ -10,7 +10,9 @@ const NavBar=()=>{
         <>
         <div className={estiloNav.navbar}>
             <nav>
+                <Link to="/mostrar">mostrar bd</Link>
                 <Link to="/cargaMasiva">CargaMasiva</Link>
+                <Link to="/panel">Panel de administracion</Link>
                 <Link to="/">Inicio</Link> 
                 <Link to="/productos">Productos</Link> 
                 <Link to="/destacados">Destacados</Link> 

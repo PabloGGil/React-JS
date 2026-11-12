@@ -1,6 +1,6 @@
 
 import Card from "../Card/Card";
-import cadorna from './ItemList.module.css'
+import cadorna from '../Estilos/ItemList.module.css'
 
 function ItemList({ recurso,vista }) {
     console.log("estoy en el itemList")

@@ -18,7 +18,7 @@ li {
 margin: 0;
 	padding: 10px 0 10px 1%;
 	list-style: none;
-	background-image: url("/admin-svgrepo-com.svg");
+	/* background-image: url("/admin-svgrepo-com.svg"); */
 	background-repeat: no-repeat;
 	background-position: left center;
 	background-size: 40px;

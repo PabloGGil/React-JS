@@ -1,4 +1,4 @@
-import estilo from './Item.module.css'
+import estilo from '../Estilos/Item.module.css'
 import {Link } from 'react-router-dom'
  
 function Item({ id, nombre, precio, stock, imagen, descripcion, categoria, onClose }) { 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react'; // Opcional: para los iconos de las flechas
-import './Calesita.modules.css';
+import '../Estilos/Calesita.modules.css';
 
  const Calesita = ({ imagenes }) => {
   const [indiceActual, setIndiceActual] = useState(0);

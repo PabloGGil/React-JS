@@ -1,7 +1,7 @@
 import {useEffect, useState}   from 'react';
 import { useParams } from 'react-router-dom';
 import estiloItem from './Item.module.css'
-import { useGetData }  from '../../Repositorio/api.js';
+// import { useGetData }  from '../../Repositorio/api.js';
 
 function ItemDetalle(){
     const { data, error, cargando } = useGetData("/Data/Productos.json");

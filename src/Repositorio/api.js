@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { collection, getDocs,doc,query,where, getDoc } from "firebase/firestore";
+import { collection, getDocs,doc, getDoc, deleteDoc } from "firebase/firestore";
 import { db } from "../Firebase/config";
 
 function useGetData(recurso) {    
@@ -100,7 +100,7 @@ async  function usePostData(recurso,postData){
     }
     
 }
-async function useGetBD( tabla){
+async function useGetFB_BD( tabla){
     const [cargando, setCargando] = useState(true);
     const [data, setData]=useState([]);
     const [error, setError]=useState("");
@@ -108,36 +108,43 @@ async function useGetBD( tabla){
         console.log("estoy en el useGetBD")
      
         useEffect(()=>{
-            let activo = true;
+            // let activo = true;
             const cargar = async () => {
                 try {
                     
                     const coleccion =  collection(db, tabla);
                     const objetos=await getDocs(coleccion)
-                    const lista = objetos.docs.map(doc => ({id: doc.id, ...doc.data()}));
-                    if (activo) {
+                    
+                    const lista = objetos.docs.map(doc => ({...doc.data(),idx: doc.id}));
+                       
+                    console.log("lista en usegetbd");
+                    console.log(lista)
+                    // if (activo) {
                        setData(lista);
-                    }
-                    // setData(rta);
+                    // }
+                   
                 } catch (err) {
-                if (activo) {
+                // if (activo) {
                     setError(err.message);
-                }
-            } finally {
-                if (activo) {
+                // }
+            } 
+            finally {
+               
                     setCargando(false);
-                }
+               
             } 
             };
             cargar();        
-            return () => {
-                activo = false; // Limpieza si el componente se desmonta
-            }; 
+            // return () => {
+            //     activo = false; // Limpieza si el componente se desmonta
+            // }; 
         },[tabla])
     //  activo = false;
-    console.log("data--->" +data)
-    return {data, error, cargando};
+    console.log("data antes de  retornar usegetBd")
+    console.log(data)
+     return {data, error, cargando};
 
 }
 
-export  {useGetData, usePostData, useGetxId, useGetBD, obtenerDocumento};
+
+export  {useGetData, usePostData, useGetxId,  obtenerDocumento};

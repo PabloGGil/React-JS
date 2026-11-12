@@ -1,4 +1,4 @@
-import estiloCarta from './Card.module.css';
+import estiloCarta from '../Estilos/Card.module.css';
 // import  Contador  from '../Contador/Contador'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -7,8 +7,8 @@ import { DtoProducto } from './Dtoproducto';
 
 // import { useCarrito } from '../../Contexto/CarritoContext';
 
-function Card(data){
-    const producto={...data};
+function Card({children}){
+    // const producto={...data};
     const [mostrarDetalle, setMostrarDetalle] = useState(false);
 
     
@@ -28,7 +28,7 @@ function Card(data){
 
     return(
         <>
-        <div className={estiloCarta.card}>
+        {/* <div className={estiloCarta.card}>
             <div className={estiloCarta.cardHeader}>
                 {producto.titulo}
             </div>
@@ -44,6 +44,9 @@ function Card(data){
                     </div>
                 </div>
             </div>
+        </div> */}
+        <div className={estiloCarta}>
+            {children}
         </div>
         {/* <DtoProducto producto={producto}/> */}
       </>

@@ -1,4 +1,4 @@
-import estiloCarta from '../Card/Card.module.css';
+import estiloCarta from '../Estilos/Card.module.css';
 import { useState} from "react";
 
 function Contador(){

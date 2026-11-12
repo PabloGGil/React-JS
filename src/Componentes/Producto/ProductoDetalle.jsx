@@ -2,21 +2,19 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom'; 
 import { useCarrito } from '../../Contexto/CarritoContext';
 import boton from '../Botones.module.css';
-import useGetBD from '../../Repositorio/RepoProducto';
+import {useGetBD} from '../../Repositorio/RepoBase';
 // import { doc, getDoc } from "firebase/firestore";
 // import { db } from "../../Firebase/config";
 
 const ProductoDetalle = () => { 
     const { id } = useParams(); 
     const {data: productos, cargando, error} = useGetBD('productos');
-    // const [error, setError] = useState(null); // <-- 1. Añadido el estado de error
-    // const [producto, setProducto] = useState(null);
     const [cantidad, setCantidad] = useState(0);
 
     const { agregarACarrito, getCantidadActual } = useCarrito();
     const cantidadActual = getCantidadActual(id);
 
-    let producto = productos.find((prod) => prod.id == id);
+    let producto = productos.find((prod) => prod.idx == id);
     
     if (cargando) {
         return (
@@ -43,7 +41,8 @@ const ProductoDetalle = () => {
         agregarACarrito(producto, cantidad);
         alert(`Agregaste ${cantidad} unidad/es de ${producto.titulo} al carrito`);
     };
-console.log(producto)
+    console.log("--------- detalleproducto.jsx -------producto a comprar")
+    console.log(producto)
     return ( 
         <div> 
             <h2>Detalle del Producto: {producto.titulo}</h2>

@@ -1,41 +1,25 @@
 import { useState, useEffect } from 'react';
 import { db } from '../../Firebase/config';
 import { collection, getDocs, deleteDoc, doc } from 'firebase/firestore';
-import FormularioContainer from '../FormularioProducto/FormularioContainer';
+import FormularioContainer from '../Formularios/FormularioContainer';
 // import Cupon from '../components/Cupon';
-import styles from './Panel.module.css';
+import estilos from './Panel.module.css';
+// import {useGetFB_BD, useDeleteFB_BD } from '../../Repositorio/api';
+import TabProducto from '../Tabs/TabProducto';
+import TabStaff from '../Tabs/TabStaff';
+
 
 const Panel = () => {
   const [tabActivo, setTabActivo] = useState('productos');
-  const [productos, setProductos] = useState([]);
-  const [productoAEditar, setProductoAEditar] = useState(null);
-  const [modalAbierto, setModalAbierto] = useState(false);
+  // const [modalAbierto, setModalAbierto] = useState(false);
 
-  useEffect(() => {
-    const getProductos = async () => {
-      try {
-        const productosRef = collection(db, "productos");
-        const resp = await getDocs(productosRef);
-        setProductos(resp.docs.map(doc => ({ ...doc.data(), id: doc.id })));
-      } catch (error) {
-        console.error("Error al obtener los productos:", error);
-      }
-    };
+  // const [cargando, setCargando] = useState(true);
+  // const [data, setData]=useState([]);
+  // const [error, setError]=useState("");
+  // const [productos, setProductos] = useState([]);
+         
+       
 
-    getProductos();
-  }, []);
-
-  const eliminarProducto = async (id) => {
-    if (!window.confirm("¿Está seguro de eliminar este producto?")) return;
-
-    try {
-      await deleteDoc(doc(db, "productos", id));
-      setProductos(prev => prev.filter((prod) => prod.id !== id));
-    } catch (error) {
-      console.error("Error al eliminar el producto:", error);
-      alert("Hubo un error al intentar eliminar el producto." + error);
-    }
-  };
 
   const abrirModalAgregar = () => {
     setProductoAEditar(null);
@@ -52,120 +36,43 @@ const Panel = () => {
     setModalAbierto(false);
   };
 
-  const handleProductoGuardado = (productoGuardado, esEdicion) => {
-    if (esEdicion) {
-      setProductos(prev => prev.map(p => p.id === productoGuardado.id ? productoGuardado : p));
-    } else {
-      setProductos(prev => [...prev, productoGuardado]);
-    }
-    cerrarModal();
-  };
-
+  
+// setModalAbierto(true)
   return (
-    <div className={styles.container}>
-      <h2 className={styles.title}>Panel de Administración</h2>
+    <div className={estilos.container}>
+      <h2 className={estilos.title}>Panel de Administración</h2>
 
-      {/* Navegación por pestañas */}
-      <div className={styles.tabs}>
+      {/* TABS para ABM de cada objeto */}
+      <div className={estilos.tabs}>
         <button 
-          className={`${styles.tab} ${tabActivo === 'productos' ? styles.activeTab : ''}`}
+          className={`${estilos.tab} ${tabActivo === 'productos' ? estilos.activeTab : ''}`}
           onClick={() => setTabActivo('productos')}
         >
           Productos
         </button>
         <button 
-          className={`${styles.tab} ${tabActivo === 'cupones' ? styles.activeTab : ''}`}
+          className={`${estilos.tab} ${tabActivo === 'cupones' ? estilos.activeTab : ''}`}
           onClick={() => setTabActivo('cupones')}
         >
           Cupones
         </button>
+        <button 
+          className={`${estilos.tab} ${tabActivo === 'staff' ? estilos.activeTab : ''}`}
+          onClick={() => setTabActivo('staff')}
+        >
+          Staff
+        </button>
       </div>
 
       {/* Contenido según la pestaña activa */}
-      {tabActivo === 'productos' && (
-        <section>
-          <div className={styles.sectionHeader}>
-            <h3 className={styles.sectionTitle}>Listado de Productos</h3>
-            <button className={styles.btnPrimary} onClick={abrirModalAgregar}>
-              <span>+</span> Agregar Producto
-            </button>
-          </div>
+      {tabActivo === 'productos' && (<TabProducto /> )}
 
-          {productos.length === 0 ? (
-            <p className={styles.emptyText}>No hay productos cargados todavía.</p>
-          ) : (
-            <div className={styles.tablaContainer}>
-              <table className={styles.tabla}>
-                <thead>
-                  <tr>
-                    <th>Imagen</th>
-                    <th>Nombre</th>
-                    <th>Categoría</th>
-                    <th>Precio</th>
-                    <th style={{ textAlign: 'right' }}>Acciones</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {productos.map(prod => (
-                    <tr key={prod.id}>
-                      <td>
-                        <img 
-                          src={prod.imagen || 'https://via.placeholder.com/50'} 
-                          alt={prod.titulo} 
-                          className={styles.productImg} 
-                        />
-                      </td>
-                      <td><strong>{prod.titulo}</strong></td>
-                      <td>{prod.categoria || '-'}</td>
-                      <td>${prod.precio}</td>
-                      <td style={{ textAlign: 'right' }}>
-                        <button 
-                          className={styles.btnOutline} 
-                          onClick={() => abrirModalEditar(prod)}
-                        >
-                          Editar
-                        </button>
-                        <button 
-                          className={styles.btnDanger} 
-                          onClick={() => eliminarProducto(prod.id)}
-                        >
-                          Eliminar
-                        </button>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          )}
-        </section>
+      {tabActivo === 'cupones' && (<section>Cupon </section>
       )}
 
-      {tabActivo === 'cupones' && (
-        <section>
-          <Cupon />
-        </section>
-      )}
+      {tabActivo === 'staff' && (<TabStaff /> )}
 
-      {/* Modal para agregar o editar producto */}
-      {modalAbierto && (
-        <div className={styles.modalOverlay} onClick={cerrarModal}>
-          <div className={styles.modalContent} onClick={e => e.stopPropagation()}>
-            <div className={styles.modalHeader}>
-              <h3 className={styles.sectionTitle}>
-                {productoAEditar ? 'Editar Producto' : 'Agregar Nuevo Producto'}
-              </h3>
-              <button className={styles.btnClose} onClick={cerrarModal}>✕</button>
-            </div>
 
-            <FormularioContainer 
-              productoAEditar={productoAEditar} 
-              setProductoAEditar={setProductoAEditar}
-              onProductoAgregado={(producto, esEdicion) => handleProductoGuardado(producto, esEdicion)} 
-            />
-          </div>
-        </div>
-      )}
     </div>
   );
 };

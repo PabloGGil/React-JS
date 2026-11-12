@@ -1,0 +1,146 @@
+/* Navbar.css */
+/* .navbar {
+    background-color: hsl(254, 94%, 26%) !important;
+    padding: 4rem;
+    display: flex;
+   
+    align-items:flex-end;
+    background-color: #0f172a;
+    padding: 1rem 2rem;
+    justify-content:flex-start ;
+    color: #ffffff;
+     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); 
+     position: sticky; 
+    top: 0;
+    z-index: 1000;
+} */
+
+.navbar {
+    width: 100%;
+    background-color: #222; /* Ajusta a tu color de fondo */
+    /* padding: 0 20px; */
+}
+.navContainer {
+    display: flex;
+    justify-content: space-between; /* Esto separa los dos grupos a los extremos */
+    align-items: center;
+    height: 70px;
+}
+
+.navLinks {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre los enlaces de la izquierda */
+}
+
+.navLinks a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.navLinks a:hover {
+    color: #00bcd4; /* Efecto hover opcional */
+}
+
+.authContainer {
+    display: flex;
+    align-items: center;
+}
+
+.userLogged {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+}
+
+.userName {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.loginBtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #007bff;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.loginBtn:hover {
+    background-color: #0056b3;
+}
+
+.btnLogout {
+    background: transparent;
+    border: none;
+    color: #ff4d4d;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+}
+
+.btnLogout:hover {
+    color: #ff1a1a;
+}
+/* a{
+    color: white;
+    margin-left: 1rem;
+    
+
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+  list-style:none;
+  margin: 0;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #fb6161;
+}
+
+.menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    padding: 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+} */
